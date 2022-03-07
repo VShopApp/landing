@@ -7,8 +7,8 @@ export default function Home() {
 			<Head>
 				<title>Home • VShop</title>
 			</Head>
-			<div className="flex flex-col lg:flex-row items-center justify-center w-full h-full">
-				<div className="w-full lg:w-1/2 p-7">
+			<div className="flex flex-col md:flex-row items-center lg:justify-center w-full h-full">
+				<div className="w-full md:w-1/2 p-7">
 					<h1 className="text-7xl font-bold">
 						Check your{" "}
 						<span className="bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-red-500">

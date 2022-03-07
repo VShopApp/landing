@@ -2,11 +2,13 @@ import Link from "next/link";
 import {MouseEventHandler} from "react";
 import {BiMenu} from "react-icons/bi";
 import {FiShoppingCart} from "react-icons/fi";
+import {MdQuestionAnswer} from "react-icons/md";
 
 const items = [
 	{
 		name: "FAQ",
 		href: "/faq",
+		icon: <MdQuestionAnswer />,
 	},
 ];
 
@@ -29,12 +31,15 @@ const Navbar = () => {
 					<BiMenu className="text-2xl" />
 				</button>
 			</div>
-			<div className="w-full flex-grow md:flex md:items-center md:w-auto hidden" id="menu">
-				<div className="text-sm md:flex-grow">
+			<div
+				className="w-full flex-grow md:flex md:items-center md:w-auto hidden mt-4 md:mt-0"
+				id="menu"
+			>
+				<div className="text-sm md:flex-grow space-y-2 md:space-y-0 md:space-x-2 md:flex md:items-center">
 					{items.map(item => (
 						<Link href={item.href} key={item.name}>
-							<a className="block mt-4 md:inline-block md:mt-0 text-white hover:underline mr-4">
-								{item.name}
+							<a className="flex items-center space-x-1 md:mt-0 text-white hover:underline">
+								{item.icon} <span>{item.name}</span>
 							</a>
 						</Link>
 					))}
@@ -43,4 +48,5 @@ const Navbar = () => {
 		</nav>
 	);
 };
+
 export default Navbar;

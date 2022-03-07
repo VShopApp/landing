@@ -66,13 +66,15 @@ export default function Dashboard() {
 				<title>Dashboard • VShop</title>
 			</Head>
 			<div className="w-full h-full">
-				<div className="rounded-md w-full p-6 space-y-7">
+				<div className="rounded-md w-full p-3 md:p-5 space-y-7">
 					<div
 						className="flex justify-center items-center h-[20vh] bg-cover bg-center bg-no-repeat bg-blend-darken bg-[#00000095] text-center rounded shadow"
 						style={{backgroundImage: `url("${bundle.displayIcon}")`}}
 					>
 						<div>
-							<h1 className="text-4xl font-bold tracking-wide">{bundle.displayName} Bundle</h1>
+							<h1 className="text-3xl md:text-4xl font-bold tracking-wide">
+								{bundle.displayName} Bundle
+							</h1>
 							<div className="flex items-center justify-center space-x-2 text-xl">
 								<span>{bundle.price}</span> <img className="h-5 w-5" src="/img/vp.png" />
 							</div>
