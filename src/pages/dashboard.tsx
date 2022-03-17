@@ -90,9 +90,9 @@ export default function Dashboard() {
 											onClick={() => {
 												setShowVideo("");
 											}}
-											className="flex justify-center items-center w-full h-screen bg-black bg-opacity-75 absolute top-0 left-0 z-10"
+											className="fixed top-0 left-0 flex justify-center items-center w-full h-screen bg-black bg-opacity-75 z-10"
 										>
-											<video className="w-1/2 h-1/2" src={item.streamedVideo} autoPlay loop />
+											<video className="w-[90%] md:w-1/2" src={item.streamedVideo} autoPlay loop />
 										</div>
 									)}
 									<img className="h-24 w-full object-contain" src={item.displayIcon} />
