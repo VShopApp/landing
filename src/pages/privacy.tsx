@@ -9,7 +9,7 @@ export default function Privacy() {
 			<div className="text-center">
 				<h1 className="text-4xl font-bold mt-5">Privacy Policy</h1>
 				<p className="mb-5">for VShop Mobile</p>
-				<div className="px-72 text-gray-300">
+				<div className="px-5 lg:px-72 text-gray-300">
 					<p>
 						vasc built the VShop app as an Open Source app. This SERVICE is provided by vasc at no
 						cost and is intended for use as is.
