@@ -3,7 +3,7 @@ import { MouseEventHandler } from "react";
 import { BiMenu } from "react-icons/bi";
 import { FiShoppingCart } from "react-icons/fi";
 import { MdQuestionAnswer } from "react-icons/md";
-import { FaDisord } from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa";
 
 const items = [
   {
