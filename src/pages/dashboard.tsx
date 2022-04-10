@@ -134,7 +134,13 @@ export default function Dashboard() {
 										<img className="h-24 w-full object-contain" src={item.displayIcon} />
 										<h1 className="text-xl">{item.displayName}</h1>
 										<div className="flex items-center space-x-2 text-md">
-											<span>{item.price}</span> <img className="h-5 w-5" src="/img/vp.png" />
+											<span>
+												<span className="line-through">{item.price}</span> {item.discountPrice}
+											</span>
+											<img className="h-5 w-5" src="/img/vp.png" />
+											<span>
+												(<span className="text-green-600">-{item.discountPercent}%</span>)
+											</span>
 										</div>
 										{item.streamedVideo && (
 											<button
