@@ -23,7 +23,6 @@ export default function Dashboard() {
 	const cookies = new Cookies();
 
 	const [loading, setLoading] = useState(true);
-	const [region, setRegion] = useState("eu");
 	const [shop, setShop] = useState<item[]>([]);
 	const [bundle, setBundle] = useState<any>({});
 	const [nightMarket, setNightMarket] = useState<nightItem[]>([]);
@@ -31,6 +30,7 @@ export default function Dashboard() {
 
 	useEffect(() => {
 		const fetchData = async () => {
+			const region = localStorage.getItem("region") || "eu";
 			const riotaccesstoken = cookies.get("riotAccessToken");
 			const riotentitlementstoken = cookies.get("riotEntitlementsToken");
 
@@ -50,7 +50,7 @@ export default function Dashboard() {
 			setLoading(false);
 		};
 		fetchData();
-	}, [region]);
+	}, []);
 
 	if (loading) {
 		return (
