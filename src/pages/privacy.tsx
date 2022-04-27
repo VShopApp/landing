@@ -72,7 +72,7 @@ export default function Privacy() {
 					<p>
 						Cookies are files with a small amount of data that are commonly used as anonymous unique
 						identifiers. These are sent to your browser from the websites that you visit and are
-						stored on your device's internal memory.
+						stored on your device&apos;s internal memory.
 					</p>{" "}
 					<p>
 						This Service does not use these “cookies” explicitly. However, the app may use
@@ -116,7 +116,7 @@ export default function Privacy() {
 						practices of any third-party sites or services.
 					</p>{" "}
 					<p className="mt-3 text-white">
-						<strong>Children's Privacy</strong>
+						<strong>Children&apos;s Privacy</strong>
 					</p>{" "}
 					<div>
 						<p>

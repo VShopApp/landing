@@ -27,6 +27,7 @@ export default function Home() {
 							className="text-primary hover:underline"
 							href="https://play.google.com/store/apps/details?id=dev.vasc.vshop"
 							target="_blank"
+							rel="noreferrer"
 						>
 							Google Play Store
 						</a>

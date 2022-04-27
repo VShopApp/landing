@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useEffect, useMemo, useState} from "react";
 import {AiFillPlayCircle} from "react-icons/ai";
 import Cookies from "universal-cookie";
 import {BiLoaderAlt} from "react-icons/bi";
@@ -20,7 +20,7 @@ interface nightItem extends item {
 }
 
 export default function Dashboard() {
-	const cookies = new Cookies();
+	const cookies = useMemo(() => new Cookies(), []);
 
 	const [loading, setLoading] = useState(true);
 	const [shop, setShop] = useState<item[]>([]);
@@ -37,20 +37,19 @@ export default function Dashboard() {
 			const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/shop`, {
 				headers: {riotaccesstoken, riotentitlementstoken, region},
 			});
-			const data = await res.json();
-			setShop(data.shop);
-			setBundle(data.bundle);
+			if (res.status === 429) {
+				alert("Too many requests, please try again later.");
+			} else {
+				const data = await res.json();
+				setShop(data.shop);
+				setBundle(data.bundle);
+				setNightMarket(data.nightMarket);
 
-			const res2 = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/nightmarket`, {
-				headers: {riotaccesstoken, riotentitlementstoken, region},
-			});
-			const data2 = await res2.json();
-			setNightMarket(data2.nightMarket);
-
-			setLoading(false);
+				setLoading(false);
+			}
 		};
 		fetchData();
-	}, []);
+	}, [cookies]);
 
 	if (loading) {
 		return (
@@ -76,7 +75,8 @@ export default function Dashboard() {
 								{bundle.displayName} Bundle
 							</h1>
 							<div className="flex items-center justify-center space-x-2 text-xl">
-								<span>{bundle.price}</span> <img className="h-5 w-5" src="/img/vp.png" />
+								<span>{bundle.price}</span>{" "}
+								<img className="h-5 w-5" src="/img/vp.png" alt="Valorant Points" />
 							</div>
 						</div>
 					</div>
@@ -84,7 +84,7 @@ export default function Dashboard() {
 						<h1 className="text-3xl font-bold">Shop</h1>
 						<div className="flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-4 mt-10">
 							{shop.map(item => (
-								<div className="w-full">
+								<div className="w-full" key={item.uuid}>
 									{showVideo === item.uuid && item.streamedVideo && (
 										<div
 											onClick={() => {
@@ -95,10 +95,15 @@ export default function Dashboard() {
 											<video className="w-[90%] md:w-1/2" src={item.streamedVideo} autoPlay loop />
 										</div>
 									)}
-									<img className="h-24 w-full object-contain" src={item.displayIcon} />
+									<img
+										className="h-24 w-full object-contain"
+										src={item.displayIcon}
+										alt={`${item.displayName}'s Icon`}
+									/>
 									<h1 className="text-xl">{item.displayName}</h1>
 									<div className="flex items-center space-x-2 text-md">
-										<span>{item.price}</span> <img className="h-5 w-5" src="/img/vp.png" />
+										<span>{item.price}</span>{" "}
+										<img className="h-5 w-5" src="/img/vp.png" alt="Valorant Points" />
 									</div>
 									{item.streamedVideo && (
 										<button
@@ -120,7 +125,7 @@ export default function Dashboard() {
 							<h1 className="text-3xl font-bold">Night Market</h1>
 							<div className="flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-4 mt-10">
 								{nightMarket.map(item => (
-									<div className="w-full">
+									<div className="w-full" key={item.uuid}>
 										{showVideo === item.uuid && item.streamedVideo && (
 											<div
 												onClick={() => {
@@ -131,13 +136,17 @@ export default function Dashboard() {
 												<video className="w-1/2 h-1/2" src={item.streamedVideo} autoPlay loop />
 											</div>
 										)}
-										<img className="h-24 w-full object-contain" src={item.displayIcon} />
+										<img
+											className="h-24 w-full object-contain"
+											src={item.displayIcon}
+											alt={`${item.displayName}'s Icon`}
+										/>
 										<h1 className="text-xl">{item.displayName}</h1>
 										<div className="flex items-center space-x-2 text-md">
 											<span>
 												<span className="line-through">{item.price}</span> {item.discountPrice}
 											</span>
-											<img className="h-5 w-5" src="/img/vp.png" />
+											<img className="h-5 w-5" src="/img/vp.png" alt="Valorant Points" />
 											<span>
 												(<span className="text-green-600">-{item.discountPercent}%</span>)
 											</span>

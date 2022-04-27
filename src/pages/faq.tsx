@@ -29,8 +29,8 @@ export default function FAQ() {
 						unnecessary API calls.
 					</FAQBlock>
 					<FAQBlock title="How can I trust you?">
-						If you don't feel comfortable sharing your credentials with a piece of code you haven't
-						even seen, you can take a look at our public GitHub repositories:
+						If you don&apos;t feel comfortable sharing your credentials with a piece of code you
+						haven&apos;t even seen, you can take a look at our public GitHub repositories:
 						<ul className="mt-2">
 							<li>
 								<a
@@ -64,7 +64,12 @@ export default function FAQ() {
 							email
 						</a>{" "}
 						or send me a direct message on any of the social media platforms listed on{" "}
-						<a href="https://vasc.dev" className="text-primary hover:underline" target="_blank">
+						<a
+							href="https://vasc.dev"
+							className="text-primary hover:underline"
+							target="_blank"
+							rel="noreferrer"
+						>
 							my website
 						</a>
 						.
