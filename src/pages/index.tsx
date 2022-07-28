@@ -1,5 +1,18 @@
-import Login from "../components/Login";
 import Head from "next/head";
+import {AiFillApple, AiOutlineGoogle} from "react-icons/ai";
+
+function DownloadBtn({name, url, icon}: {name: string; url: string; icon: JSX.Element}) {
+	return (
+		<a
+			href={url}
+			target="_blank"
+			className="bg-primary text-white px-4 py-2 rounded-lg flex items-center space-x-1"
+		>
+			{icon}
+			<span>{name}</span>
+		</a>
+	);
+}
 
 export default function Home() {
 	return (
@@ -7,9 +20,11 @@ export default function Home() {
 			<Head>
 				<title>Home • VShop</title>
 			</Head>
-			<div className="flex flex-col md:flex-row items-center lg:justify-center w-full h-full">
-				<div className="w-full md:w-1/2 p-7">
-					<h1 className="text-7xl font-bold">
+			<div className="flex items-center justify-center w-full h-full text-center">
+				<div className="flex flex-col items-center w-1/3">
+					<img src="/img/vshop.png" className="w-32 h-32 rounded-3xl" />
+					<h1 className="text-6xl font-bold mt-3">VShop</h1>
+					<p className="text-xl text-gray-300 mt-3">
 						Check your{" "}
 						<span className="bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-red-500">
 							Valorant
@@ -19,23 +34,19 @@ export default function Home() {
 							ease
 						</span>
 						.
-					</h1>
-					<p className="text-lg mt-5 text-gray-300">
-						With VShop you can check your Valorant Shop, Bundle and Night Shop on the go. We also
-						have an Android app, which you can download on the{" "}
-						<a
-							className="text-primary hover:underline"
-							href="https://play.google.com/store/apps/details?id=dev.vasc.vshop"
-							target="_blank"
-							rel="noreferrer"
-						>
-							Google Play Store
-						</a>
-						.
 					</p>
-				</div>
-				<div className="flex justify-center w-full lg:w-1/2 p-7 lg:p-0">
-					<Login />
+					<div className="flex items-center space-x-3 mt-5">
+						<DownloadBtn
+							name="Google Play"
+							url="https://play.google.com/store/apps/details?id=dev.vasc.vshop"
+							icon={<AiOutlineGoogle className="w-6 h-6" />}
+						/>
+						<DownloadBtn
+							name="TestFlight"
+							url="https://testflight.apple.com/join/PMbtW6bX"
+							icon={<AiFillApple className="w-6 h-6" />}
+						/>
+					</div>
 				</div>
 			</div>
 		</>
