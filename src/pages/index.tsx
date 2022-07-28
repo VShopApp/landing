@@ -6,6 +6,7 @@ function DownloadBtn({name, url, icon}: {name: string; url: string; icon: JSX.El
 		<a
 			href={url}
 			target="_blank"
+			rel="noreferrer"
 			className="bg-primary text-white px-4 py-2 rounded-lg flex items-center space-x-1"
 		>
 			{icon}
@@ -22,7 +23,7 @@ export default function Home() {
 			</Head>
 			<div className="flex items-center justify-center w-full h-full text-center">
 				<div className="flex flex-col items-center w-1/3">
-					<img src="/img/vshop.png" className="w-32 h-32 rounded-3xl" />
+					<img src="/img/vshop.png" alt="VShop Logo" className="w-32 h-32 rounded-3xl" />
 					<h1 className="text-6xl font-bold mt-3">VShop</h1>
 					<p className="text-xl text-gray-300 mt-3">
 						Check your{" "}
