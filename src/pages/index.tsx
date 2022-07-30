@@ -43,8 +43,8 @@ export default function Home() {
 							icon={<AiOutlineGoogle className="w-6 h-6" />}
 						/>
 						<DownloadBtn
-							name="TestFlight"
-							url="https://testflight.apple.com/join/PMbtW6bX"
+							name="App Store"
+							url="https://apps.apple.com/us/app/vshop-for-valorant/id1636765187"
 							icon={<AiFillApple className="w-6 h-6" />}
 						/>
 					</div>
