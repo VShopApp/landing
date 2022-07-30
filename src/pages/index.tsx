@@ -19,7 +19,7 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>Home • VShop</title>
+				<title>VShop: Check your Valorant Shop with ease.</title>
 			</Head>
 			<div className="flex items-center justify-center w-full h-full text-center">
 				<div className="flex flex-col items-center md:w-1/3">
