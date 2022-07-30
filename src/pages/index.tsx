@@ -38,7 +38,7 @@ export default function Home() {
 					</p>
 					<div className="md:flex items-center space-y-3 md:space-y-0 md:space-x-3 mt-5">
 						<DownloadBtn
-							name="Google Play"
+							name="Play Store"
 							url="https://play.google.com/store/apps/details?id=dev.vasc.vshop"
 							icon={<AiOutlineGoogle className="w-6 h-6" />}
 						/>
