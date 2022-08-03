@@ -31,7 +31,7 @@ export default function Privacy() {
 					</p>
 					<p className="mt-3 text-white">
 						<strong>Information Collection and Use</strong>
-					</p>{" "}
+					</p>
 					<p>
 						For a better experience, while using our Service, I may require you to provide us with
 						certain personally identifiable information. The information that I request will be
@@ -53,11 +53,29 @@ export default function Privacy() {
 									Google Play Services
 								</a>
 							</li>
+							<li>
+								<a
+									href="https://firebase.google.com/policies/analytics"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									Google Analytics for Firebase
+								</a>
+							</li>
+							<li>
+								<a
+									href="https://firebase.google.com/support/privacy/"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									Firebase Crashlytics
+								</a>
+							</li>
 						</ul>
 					</div>
 					<p className="mt-3 text-white">
 						<strong>Log Data</strong>
-					</p>{" "}
+					</p>
 					<p>
 						I want to inform you that whenever you use my Service, in a case of an error in the app
 						I collect data and information (through third-party products) on your phone called Log
@@ -68,7 +86,7 @@ export default function Privacy() {
 					</p>
 					<p className="mt-3 text-white">
 						<strong>Cookies</strong>
-					</p>{" "}
+					</p>
 					<p>
 						Cookies are files with a small amount of data that are commonly used as anonymous unique
 						identifiers. These are sent to your browser from the websites that you visit and are
@@ -83,7 +101,7 @@ export default function Privacy() {
 					</p>
 					<p className="mt-3 text-white">
 						<strong>Service Providers</strong>
-					</p>{" "}
+					</p>
 					<p>I may employ third-party companies and individuals due to the following reasons:</p>
 					<ul>
 						<li>To facilitate our Service;</li>
@@ -99,7 +117,7 @@ export default function Privacy() {
 					</p>
 					<p className="mt-3 text-white">
 						<strong>Security</strong>
-					</p>{" "}
+					</p>
 					<p>
 						I value your trust in providing us your Personal Information, thus we are striving to
 						use commercially acceptable means of protecting it. But remember that no method of
@@ -108,7 +126,7 @@ export default function Privacy() {
 					</p>
 					<p className="mt-3 text-white">
 						<strong>Links to Other Sites</strong>
-					</p>{" "}
+					</p>
 					<p>
 						This Service may contain links to other sites. If you click on a third-party link, you
 						will be directed to that site. Note that these external sites are not operated by me.
@@ -118,7 +136,7 @@ export default function Privacy() {
 					</p>
 					<p className="mt-3 text-white">
 						<strong>Children&apos;s Privacy</strong>
-					</p>{" "}
+					</p>
 					<div>
 						<p>
 							These Services do not address anyone under the age of 13. I do not knowingly collect
@@ -131,13 +149,13 @@ export default function Privacy() {
 					</div>
 					<p className="mt-3 text-white">
 						<strong>Changes to This Privacy Policy</strong>
-					</p>{" "}
+					</p>
 					<p>
 						I may update our Privacy Policy from time to time. Thus, you are advised to review this
 						page periodically for any changes. I will notify you of any changes by posting the new
 						Privacy Policy on this page.
 					</p>
-					<p>This policy is effective as of 2022-07-28</p>
+					<p>This policy is effective as of 2022-08-03</p>
 					<p className="mt-3 text-white">
 						<strong>Contact Us</strong>
 					</p>
