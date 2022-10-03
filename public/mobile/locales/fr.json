@@ -1,0 +1,46 @@
+{
+  "account" : "compte",
+  "balances" : "soldes",
+  "credits" : "Crédits",
+  "danger_zone" : "Zone de danger",
+  "delete_account" : "supprimer le compte",
+  "discord_server" : "Discord serveur",
+  "fag" : "Agents gratuits ",
+  "fetching" : {
+    "balances" : "Équilibre de la balance...",
+    "progress" : "Progrès de l'engraissement...",
+    "username" : "Fetching nom d'utilisateur..."
+  },
+  "info" : "info",
+  "language" : "langue",
+  "languages" : {
+    "ar" : "arabe",
+    "de" : "allemand",
+    "fr" : "français",
+    "ko" : "coréen",
+    "pl" : "Polonais",
+    "pt" : "Portugais",
+    "ru" : "russe",
+    "tr" : "Turc"
+  },
+  "level" : "Niveau",
+  "links" : "Liens",
+  "login" : "connexion",
+  "logout" : "déconnexion",
+  "privacy_policy" : "Politique de confidentialité",
+  "progress" : "progrès",
+  "region" : "Région",
+  "regions" : {
+    "eu" : "Europe",
+    "kr" : "Corée",
+    "na" : "Amérique du Nord\n"
+  },
+  "separate" : "séparé",
+  "settings" : "Paramètres",
+  "shop" : "Boutique",
+  "signin" : "Se connecter avec Riot ID",
+  "translators" : "Traducteurs",
+  "videos" : "Vidéos",
+  "welcome" : "Bienvenue à VShop",
+  "xp" : "XP"
+}
