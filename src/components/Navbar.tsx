@@ -2,7 +2,7 @@ import Link from "next/link";
 import {MouseEventHandler} from "react";
 import {BiMenu} from "react-icons/bi";
 import {FiShoppingCart} from "react-icons/fi";
-import {FaBook, FaDiscord} from "react-icons/fa";
+import {FaBook, FaDiscord, FaDonate} from "react-icons/fa";
 
 const items = [
 	{
@@ -14,6 +14,11 @@ const items = [
 		name: "Docs",
 		href: "https://docs.vshop.one",
 		icon: <FaBook />,
+	},
+	{
+		name: "Donate",
+		href: "/donate",
+		icon: <FaDonate />,
 	},
 ];
 
