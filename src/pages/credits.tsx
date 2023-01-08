@@ -149,7 +149,11 @@ export default function Credits() {
 							<div className="my-4">
 								{item.members.map((member, i) => (
 									<div key={i} className="flex items-center space-x-2 py-1">
-										<img src={member.imgUrl} className="w-10 rounded-full" />
+										<img
+											alt={`${member.name}'s profile picture`}
+											src={member.imgUrl}
+											className="w-10 rounded-full"
+										/>
 										<div>
 											<p className="text-lg">{member.name}</p>
 											{(member as any).info && (

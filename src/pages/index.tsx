@@ -61,14 +61,14 @@ export default function Home() {
 						</h1>
 						<div className="mt-2 md:mt-8 flex flex-row items-center justify-center md:justify-start space-x-3">
 							<a href="https://play.google.com/store/apps/details?id=dev.vasc.vshop">
-								<img src="/img/google-play-badge.png" className="w-44" />
+								<img alt="Google Play Badge" src="/img/google-play-badge.png" className="w-44" />
 							</a>
 							<a href="https://apps.apple.com/app/vshop-for-valorant/id1636765187">
-								<img src="/img/app-store-badge.png" className="w-44" />
+								<img alt="App Store Badge" src="/img/app-store-badge.png" className="w-44" />
 							</a>
 						</div>
 					</div>
-					<img src="/img/mockup.png" className="h-[500px]" />
+					<img alt="VShop Mockup" src="/img/mockup.png" className="h-[500px]" />
 				</div>
 			</PageLayout>
 		</>

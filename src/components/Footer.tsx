@@ -41,10 +41,10 @@ export default function Footer() {
 				<div>
 					<h2 className="text-xl font-bold text-white mb-2">Download</h2>
 					<a href="https://play.google.com/store/apps/details?id=dev.vasc.vshop">
-						<img src="/img/google-play-badge.png" className="w-28 mb-1" />
+						<img alt="Google Play Badge" src="/img/google-play-badge.png" className="w-28 mb-1" />
 					</a>
 					<a href="https://apps.apple.com/app/vshop-for-valorant/id1636765187">
-						<img src="/img/app-store-badge.png" className="w-28" />
+						<img alt="App Store Badge" src="/img/app-store-badge.png" className="w-28" />
 					</a>
 				</div>
 			</div>
