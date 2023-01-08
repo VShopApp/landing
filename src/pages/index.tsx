@@ -1,55 +1,76 @@
 import Head from "next/head";
-import {AiFillApple, AiOutlineGoogle} from "react-icons/ai";
+import PageLayout from "../components/PageLayout";
+import TextTransition, { presets } from "react-text-transition";
+import { useEffect, useState } from "react";
 
-function DownloadBtn({name, url, icon}: {name: string; url: string; icon: JSX.Element}) {
-	return (
-		<a
-			href={url}
-			target="_blank"
-			rel="noreferrer"
-			className="bg-primary text-white px-4 py-2 rounded-lg flex items-center space-x-1"
-		>
-			{icon}
-			<span>{name}</span>
-		</a>
-	);
-}
+const activities = [
+	"making breakfast.",
+	"exercising.",
+	"watching a movie.",
+	"reading a book.",
+	"relaxing on the couch.",
+	"taking a walk.",
+	"going for a run.",
+	"going to the gym.",
+	"attending a meeting.",
+	"exploring a new city.",
+	"cooking a meal.",
+	"gardening.",
+	"attending a class.",
+	"going to a concert.",
+	"going to a museum.",
+	"visiting a zoo.",
+	"going to a theme park.",
+	"taking a road trip.",
+	"going on a hike.",
+	"going to the beach.",
+	"going on a vacation.",
+	"traveling abroad.",
+	"going to a festival.",
+	"attending a workshop.",
+	"visiting a winery.",
+	"attending a book club.",
+	"going to a theater.",
+	"going to a coffee shop.",
+];
 
 export default function Home() {
+	const [index, setIndex] = useState(0);
+
+	useEffect(() => {
+		const intervalId = setInterval(
+			() => setIndex(Math.floor(Math.random() * activities.length)),
+			3000
+		);
+		return () => clearTimeout(intervalId);
+	}, []);
+
 	return (
 		<>
 			<Head>
 				<title>VShop: Check your Valorant Shop with ease.</title>
 			</Head>
-			<div className="flex items-center justify-center w-full h-full text-center">
-				<div className="flex flex-col items-center md:w-1/3">
-					<img src="/img/vshop.png" alt="VShop Logo" className="w-32 h-32 rounded-3xl" />
-					<h1 className="text-6xl font-bold mt-3">VShop</h1>
-					<p className="text-xl text-gray-300 mt-3">
-						Check your{" "}
-						<span className="bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-red-500">
-							Valorant
-						</span>{" "}
-						Shop with{" "}
-						<span className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-green-500">
-							ease
-						</span>
-						.
-					</p>
-					<div className="md:flex items-center space-y-3 md:space-y-0 md:space-x-3 mt-5">
-						<DownloadBtn
-							name="Play Store"
-							url="https://play.google.com/store/apps/details?id=dev.vasc.vshop"
-							icon={<AiOutlineGoogle className="w-6 h-6" />}
-						/>
-						<DownloadBtn
-							name="App Store"
-							url="https://apps.apple.com/us/app/vshop-for-valorant/id1636765187"
-							icon={<AiFillApple className="w-6 h-6" />}
-						/>
+			<PageLayout>
+				<div className="flex flex-col-reverse md:flex-row items-center h-full w-full justify-evenly lg:px-[5%] py-5 md:py-20">
+					<div className="max-w-lg">
+						<h1 className="text-3xl md:text-4xl font-bold text-center md:text-left py-3 md:p-0">
+							Check your Valorant store while{" "}
+							<span className="text-gray-400 inline-flex">
+								<TextTransition springConfig={presets.stiff}>{activities[index]}</TextTransition>
+							</span>
+						</h1>
+						<div className="mt-2 md:mt-8 flex flex-row items-center justify-center md:justify-start space-x-3">
+							<a href="https://play.google.com/store/apps/details?id=dev.vasc.vshop">
+								<img src="/img/google-play-badge.png" className="w-44" />
+							</a>
+							<a href="https://apps.apple.com/app/vshop-for-valorant/id1636765187">
+								<img src="/img/app-store-badge.png" className="w-44" />
+							</a>
+						</div>
 					</div>
+					<img src="/img/mockup.png" className="h-[500px]" />
 				</div>
-			</div>
+			</PageLayout>
 		</>
 	);
 }

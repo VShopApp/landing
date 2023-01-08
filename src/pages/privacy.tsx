@@ -1,15 +1,10 @@
-import Head from "next/head";
+import PageLayout from "../components/PageLayout";
 
 export default function Privacy() {
 	return (
 		<>
-			<Head>
-				<title>Privacy Policy • VShop</title>
-			</Head>
-			<div className="text-center">
-				<h1 className="text-4xl font-bold mt-5">Privacy Policy</h1>
-				<p className="mb-5">for VShop Mobile</p>
-				<div className="px-5 lg:px-72 text-gray-300">
+			<PageLayout pageTitle="Privacy Policy">
+				<div className="text-gray-300">
 					<p>
 						Nico Vana-Schaufler built the VShop app as a Free app. This SERVICE is provided by Nico
 						Vana-Schaufler at no cost and is intended for use as is.
@@ -164,7 +159,7 @@ export default function Privacy() {
 						contact me at nico@vasc.dev.
 					</p>
 				</div>
-			</div>
+			</PageLayout>
 		</>
 	);
 }
