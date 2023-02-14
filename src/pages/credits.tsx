@@ -71,6 +71,7 @@ export async function getStaticProps() {
 					const res = await fetch(`${DISCORD_API_URL}/users/${user.discordId}`, {
 						headers: { Authorization: `Bot ${process.env.BOT_TOKEN}` },
 					});
+					if (!res.ok) throw new Error(`Failed to fetch user, received status ${res.status}`);
 					const discordUser: APIUser = await res.json();
 					return {
 						username: discordUser.username,
