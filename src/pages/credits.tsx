@@ -89,7 +89,7 @@ export async function getStaticProps() {
 		props: {
 			fullCredits,
 		},
-		revalidate: 60 * 60,
+		revalidate: 3600,
 	};
 }
 
