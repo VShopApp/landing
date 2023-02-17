@@ -44,6 +44,7 @@ const credits = [
 			{ discordId: "774992489945890896", info: "Italian" },
 			{ discordId: "517401133384466461", info: "Japanese" },
 			{ discordId: "330593196012863490", info: "Spanish" },
+			{ discordId: "399191813623119894", info: "Spanish" },
 			{ discordId: "880312739300536331", info: "Thai" },
 			{ discordId: "504207204644290570", info: "Vietnamese" },
 			{ discordId: "813389418349985833", info: "Vietnamese" },
