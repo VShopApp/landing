@@ -35,7 +35,7 @@ const credits = [
 			{ discordId: "366377379599351809", info: "Korean" },
 			{ discordId: "395347408243916802", info: "Portuguese" },
 			{ discordId: "744189530470350919", info: "Portuguese" },
-			{ discordId: "531840835025764383", info: "Russian" },
+			{ discordId: "295182226998558730", info: "Russian" },
 			{ discordId: "1069385327418024037", info: "Turkish" },
 			{ discordId: "643500735031541760", info: "Arabic" },
 			{ discordId: "284350640279257091", info: "Polish" },
@@ -72,17 +72,18 @@ export async function getStaticProps() {
 					const res = await fetch(`${DISCORD_API_URL}/users/${user.discordId}`, {
 						headers: { Authorization: `Bot ${process.env.BOT_TOKEN}` },
 					});
-					if (!res.ok)
-						throw new Error(
-							`Failed to fetch user ${user.discordId}, received status ${res.status}`
-						);
-					const discordUser: APIUser = await res.json();
-					return {
-						username: discordUser.username,
-						discriminator: discordUser.discriminator,
-						avatar: discordUser.avatar,
-						...user,
-					};
+
+					if (res.status === 200) {
+						const discordUser: APIUser = await res.json();
+						return {
+							username: discordUser.username,
+							discriminator: discordUser.discriminator,
+							avatar: discordUser.avatar,
+							...user,
+						};
+					} else {
+						throw new Error(`Error fetching user ${user.discordId}, status: ${res.status}.`);
+					}
 				})
 			),
 		};
@@ -92,6 +93,7 @@ export async function getStaticProps() {
 		props: {
 			fullCredits,
 		},
+		revalidate: 10 * 60,
 	};
 }
 
