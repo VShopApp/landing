@@ -49,10 +49,13 @@ export default function Footer() {
 				</div>
 			</div>
 			<div className="py-4 text-center text-xs text-gray-300">
-				<p>VShop is not endorsed by Riot Games in any way.</p>
 				<p>
-					Riot Games, Valorant, and all associated properties are trademarks or registered
-					trademarks of Riot Games, Inc.
+					VShop isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games
+					or anyone officially involved in producing or managing Riot Games properties.
+				</p>
+				<p>
+					Riot Games, and all associated properties are trademarks or registered trademarks of Riot
+					Games, Inc.
 				</p>
 			</div>
 		</div>
