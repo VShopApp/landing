@@ -63,38 +63,42 @@ interface IFullCredit {
 	}[];
 }
 export async function getStaticProps() {
-	const fullCredits: IFullCredit[] = [];
-	for (let i = 0; i < credits.length; i++) {
-		fullCredits[i] = {
-			name: credits[i].name,
-			users: await Promise.all(
-				credits[i].users.map(async user => {
-					const res = await fetch(`${DISCORD_API_URL}/users/${user.discordId}`, {
-						headers: { Authorization: `Bot ${process.env.BOT_TOKEN}` },
-					});
+	try {
+		const fullCredits: IFullCredit[] = [];
+		for (let i = 0; i < credits.length; i++) {
+			fullCredits[i] = {
+				name: credits[i].name,
+				users: await Promise.all(
+					credits[i].users.map(async user => {
+						const res = await fetch(`${DISCORD_API_URL}/users/${user.discordId}`, {
+							headers: { Authorization: `Bot ${process.env.BOT_TOKEN}` },
+						});
 
-					if (res.status === 200) {
-						const discordUser: APIUser = await res.json();
-						return {
-							username: discordUser.username,
-							discriminator: discordUser.discriminator,
-							avatar: discordUser.avatar,
-							...user,
-						};
-					} else {
-						throw new Error(`Error fetching user ${user.discordId}, status: ${res.status}.`);
-					}
-				})
-			),
+						if (res.status === 200) {
+							const discordUser: APIUser = await res.json();
+							return {
+								username: discordUser.username,
+								discriminator: discordUser.discriminator,
+								avatar: discordUser.avatar,
+								...user,
+							};
+						} else {
+							throw new Error(`Error fetching user ${user.discordId}, status: ${res.status}.`);
+						}
+					})
+				),
+			};
+		}
+
+		return {
+			props: {
+				fullCredits,
+			},
+			revalidate: 10 * 60,
 		};
+	} catch (e) {
+		return null;
 	}
-
-	return {
-		props: {
-			fullCredits,
-		},
-		revalidate: 10 * 60,
-	};
 }
 
 export default function Credits({ fullCredits }: { fullCredits: IFullCredit[] }) {
