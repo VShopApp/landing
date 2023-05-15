@@ -7,11 +7,6 @@ interface props {
 	pageTitle?: string;
 }
 const Navbar = (props: props) => {
-	const toggleNavItems: MouseEventHandler = e => {
-		var menu = document.getElementById("menu") as HTMLDivElement;
-		menu.classList.toggle("hidden");
-	};
-
 	return (
 		<nav className="bg-primary py-5 pl-[10%] pr-[10%]">
 			<nav className="flex items-center justify-between flex-wrap">
@@ -21,11 +16,6 @@ const Navbar = (props: props) => {
 						<span className="font-semibold text-2xl tracking-wide">VShop</span>
 					</a>
 				</Link>
-				<div className="block md:hidden" onClick={toggleNavItems}>
-					<button className="flex items-center px-3 py-2">
-						<BiMenu className="text-2xl" />
-					</button>
-				</div>
 			</nav>
 			{props.pageTitle && (
 				<div className="h-32 flex items-end">

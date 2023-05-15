@@ -2,6 +2,7 @@ import Head from "next/head";
 import PageLayout from "../components/PageLayout";
 import TextTransition, { presets } from "react-text-transition";
 import { useEffect, useState } from "react";
+import AndroidDownload from "../components/AndroidDownload";
 
 const activities = [
 	"making breakfast.",
@@ -52,17 +53,15 @@ export default function Home() {
 			</Head>
 			<PageLayout>
 				<div className="flex flex-col-reverse md:flex-row items-center h-full w-full justify-evenly lg:px-[5%] py-5 md:py-20">
-					<div className="max-w-lg">
+					<div className="max-w-lg min-w-[50%]">
 						<h1 className="text-3xl md:text-4xl font-bold text-center md:text-left py-3 md:p-0">
 							Check your Valorant store while{" "}
-							<span className="text-gray-400 inline-flex">
+							<span className="text-gray-400 inline-flex text-ellipsis">
 								<TextTransition springConfig={presets.stiff}>{activities[index]}</TextTransition>
 							</span>
 						</h1>
-						<div className="mt-2 md:mt-8 flex flex-row items-center justify-center md:justify-start space-x-3">
-							<a href="https://play.google.com/store/apps/details?id=dev.vasc.vshop">
-								<img alt="Google Play Badge" src="/img/google-play-badge.png" className="w-44" />
-							</a>
+						<div className="mt-2 md:mt-8 flex flex-col md:flex-row items-center justify-start space-y-3 md:space-y-0 md:space-x-3">
+							<AndroidDownload />
 							<a href="https://apps.apple.com/app/vshop-for-valorant/id1636765187">
 								<img alt="App Store Badge" src="/img/app-store-badge.png" className="w-44" />
 							</a>

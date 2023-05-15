@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AndroidDownload from "./AndroidDownload";
 
 export default function Footer() {
 	return (
@@ -40,12 +41,12 @@ export default function Footer() {
 				</div>
 				<div>
 					<h2 className="text-xl font-bold text-white mb-2">Download</h2>
-					<a href="https://play.google.com/store/apps/details?id=dev.vasc.vshop">
-						<img alt="Google Play Badge" src="/img/google-play-badge.png" className="w-28 mb-1" />
-					</a>
-					<a href="https://apps.apple.com/app/vshop-for-valorant/id1636765187">
-						<img alt="App Store Badge" src="/img/app-store-badge.png" className="w-28" />
-					</a>
+					<div className="flex flex-col items-start justify-start space-y-1">
+						<AndroidDownload />
+						<a href="https://apps.apple.com/app/vshop-for-valorant/id1636765187">
+							<img alt="App Store Badge" src="/img/app-store-badge.png" className="w-40" />
+						</a>
+					</div>
 				</div>
 			</div>
 			<div className="py-4 text-center text-xs text-gray-300">
