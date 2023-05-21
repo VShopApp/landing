@@ -7,8 +7,8 @@ module.exports = {
 				permanent: false,
 			},
 			{
-				source: "/donate",
-				destination: "https://www.buymeacoffee.com/vasc",
+				source: "/restore-purchase",
+				destination: "https://tally.so/r/mRdPEJ",
 				permanent: false,
 			},
 		];
