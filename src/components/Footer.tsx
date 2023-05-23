@@ -15,7 +15,7 @@ export default function Footer() {
 							<Link href="/credits">Credits</Link>
 						</p>
 						<p>
-							<a href="/donate">Donate</a>
+							<Link href="/donate">Donate</Link>
 						</p>
 					</div>
 				</div>

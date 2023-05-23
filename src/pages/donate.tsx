@@ -10,11 +10,14 @@ export default function Privacy() {
 							Support the development and get access to Wishlist Notifications by donating any
 							amount.
 						</p>
-						<p>To donate please open VShop on your phone, go to settings and click on "Donate".</p>
+						<p>
+							To donate please open VShop on your phone, go to settings and click on
+							&quot;Donate&quot;.
+						</p>
 						<p>Any amount is appreciated, but it must be at least $2.</p>
 						<h3 className="text-2xl font-bold">Thanks a lot 💖</h3>
 					</div>
-					<img src="/img/donate-mockup.png" />
+					<img alt="Donation Popup in the VShop App" src="/img/donate-mockup.png" />
 				</div>
 			</PageLayout>
 		</>
