@@ -12,9 +12,7 @@ export default function Footer() {
 							<a href="https://docs.vshop.one">Documentation</a>
 						</p>
 						<p>
-							<Link href="/credits">
-								<a>Credits</a>
-							</Link>
+							<Link href="/credits">Credits</Link>
 						</p>
 						<p>
 							<a href="/donate">Donate</a>
@@ -33,9 +31,7 @@ export default function Footer() {
 					<h2 className="text-xl font-bold text-white mb-2">Legal</h2>
 					<div className="space-y-[0.5px]">
 						<p>
-							<Link href="/privacy">
-								<a>Privacy Policy</a>
-							</Link>
+							<Link href="/privacy">Privacy Policy</Link>
 						</p>
 					</div>
 				</div>
@@ -49,7 +45,7 @@ export default function Footer() {
 					</div>
 				</div>
 			</div>
-			<div className="py-4 text-center text-xs text-gray-300">
+			<div className="p-4 text-center text-xs text-gray-300">
 				<p>
 					VShop isn&apos;t endorsed by Riot Games and doesn&apos;t reflect the views or opinions of
 					Riot Games or anyone officially involved in producing or managing Riot Games properties.

@@ -1,6 +1,4 @@
 import Link from "next/link";
-import { MouseEventHandler } from "react";
-import { BiMenu } from "react-icons/bi";
 import { FiShoppingCart } from "react-icons/fi";
 
 interface props {
@@ -10,11 +8,9 @@ const Navbar = (props: props) => {
 	return (
 		<nav className="bg-primary py-5 pl-[10%] pr-[10%]">
 			<nav className="flex items-center justify-between flex-wrap">
-				<Link href="/">
-					<a className="flex items-center flex-shrink-0 mr-4 space-x-2">
-						<FiShoppingCart className="w-7 h-7" />
-						<span className="font-semibold text-2xl tracking-wide">VShop</span>
-					</a>
+				<Link className="flex items-center flex-shrink-0 mr-4 space-x-2" href="/">
+					<FiShoppingCart className="w-7 h-7" />
+					<span className="font-semibold text-2xl tracking-wide">VShop</span>
 				</Link>
 			</nav>
 			{props.pageTitle && (
