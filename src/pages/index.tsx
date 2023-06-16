@@ -2,7 +2,9 @@ import Head from "next/head";
 import PageLayout from "../components/PageLayout";
 import TextTransition, { presets } from "react-text-transition";
 import { useEffect, useState } from "react";
-import AndroidDownload from "../components/AndroidDownload";
+import { FiGithub, FiLock, FiServer, FiSmartphone } from "react-icons/fi";
+import { AiFillAndroid } from "react-icons/ai";
+import Link from "../components/Link";
 
 const activities = [
 	"making breakfast.",
@@ -52,22 +54,102 @@ export default function Home() {
 				<title>VShop: Check your Valorant Shop with ease.</title>
 			</Head>
 			<PageLayout>
-				<div className="flex flex-col-reverse md:flex-row items-center h-full w-full justify-evenly lg:px-[5%] py-5 md:py-20">
-					<div className="max-w-lg min-w-[50%]">
-						<h1 className="text-3xl md:text-4xl font-bold text-center md:text-left py-3 md:p-0">
-							Check your Valorant store while{" "}
-							<span className="text-gray-400 inline-flex text-ellipsis">
-								<TextTransition springConfig={presets.stiff}>{activities[index]}</TextTransition>
-							</span>
-						</h1>
-						<div className="mt-2 md:mt-8 flex flex-col md:flex-row items-center justify-start space-y-3 md:space-y-0 md:space-x-3">
-							<AndroidDownload />
-							<a href="https://apps.apple.com/app/vshop-for-valorant/id1636765187">
-								<img alt="App Store Badge" src="/img/app-store-badge.png" className="w-44" />
-							</a>
+				<div className="text-center mt-10">
+					<div className="text-4xl sm:text-5xl py-5 font-medium">
+						<h1>Check your Valorant shop while</h1>
+						<div className="text-primary inline-flex text-ellipsis">
+							<TextTransition springConfig={presets.gentle}>{activities[index]}</TextTransition>
 						</div>
 					</div>
-					<img alt="VShop Mockup" src="/img/mockup.png" className="h-[500px]" />
+					<h2 className="text-xl text-gray-300 pb-3">Fully transparent, secure and elegant.</h2>
+					<div className="flex items-center justify-center space-x-2">
+						<Link
+							href="https://github.com/VShopApp/mobile/releases/latest/download/VShop.apk"
+							text="Download Android APK"
+							icon={AiFillAndroid}
+						/>
+						<Link href="https://github.com/VShopApp/mobile" text="Source Code" icon={FiGithub} />
+					</div>
+					<div className="my-2">
+						<a
+							href="https://docs.vshop.one/distribution-update"
+							className="text-primary underline underline-offset-4 text-sm"
+						>
+							Why is it not on the Play Store or App Store?
+						</a>
+					</div>
+					<div className="flex items-center justify-center space-x-3 mt-5 overflow-x-auto">
+						{["0", "1", "3"].map((img, i) => (
+							<img
+								alt="VShop App Screenshot"
+								key={i}
+								src={`/img/screenshots/${img}.png`}
+								className="w-56 rounded-lg"
+							/>
+						))}
+					</div>
+				</div>
+				<div
+					id="transparent"
+					className="flex items-center justify-evenly mt-10 md:space-x-5 bg-white bg-opacity-5 border border-white border-opacity-10 p-10 rounded-lg"
+				>
+					<div>
+						<h1 className="text-5xl font-bold">Transparent.</h1>
+						<p className="text-lg text-gray-300 mt-3">
+							Our source code is publicly available on{" "}
+							<a
+								href="https://github.com/vshopapp/mobile"
+								className="text-primary underline underline-offset-4"
+							>
+								GitHub
+							</a>{" "}
+							for anyone to see, so you can verify what we are doing on your device. We are also
+							open to contributions!
+						</p>
+					</div>
+					<img
+						alt="Source Code of the VShop mobile app on GitHub"
+						src="/img/github.png"
+						className="hidden md:block rounded-md w-[100%] shadow-md"
+					/>
+				</div>
+				<div
+					id="secure"
+					className="flex items-center justify-evenly mt-10 md:space-x-5 bg-white bg-opacity-5 border border-white border-opacity-10 p-10 rounded-lg"
+				>
+					<FiLock className="hidden md:block w-48 h-28" />
+					<div>
+						<h1 className="text-5xl font-bold">Secure.</h1>
+						<p className="text-lg text-gray-300 mt-3">
+							We transfer your credentials securely and <b>directly</b> to the official servers
+							without any detours. Your credentials are never transmitted or stored to any other
+							services or servers.
+						</p>
+					</div>
+				</div>
+				<div
+					id="elegant"
+					className="flex items-center justify-evenly mt-10 md:space-x-5 bg-white bg-opacity-5 border border-white border-opacity-10 p-10 rounded-lg"
+				>
+					<div>
+						<h1 className="text-5xl font-bold">Elegant.</h1>
+						<p className="text-lg text-gray-300 mt-3">
+							Built with{" "}
+							<a
+								href="https://callstack.github.io/react-native-paper/"
+								className="text-primary underline underline-offset-4"
+							>
+								React Native Paper
+							</a>
+							, VShop seamlessly blends in with the Android operating system, making it an elegant
+							way to see what your Valorant store has to offer.
+						</p>
+					</div>
+					<img
+						alt="VShop mockup"
+						src="/img/mockup.png"
+						className="hidden md:block rounded-md w-[60%] h-max object-cover px-[5%] pt-2 shadow-md bg-primary"
+					/>
 				</div>
 			</PageLayout>
 		</>

@@ -1,24 +1,44 @@
 import Link from "next/link";
-import { FiShoppingCart } from "react-icons/fi";
+import { FiGithub, FiShoppingCart } from "react-icons/fi";
 
 interface props {
 	pageTitle?: string;
 }
 const Navbar = (props: props) => {
 	return (
-		<nav className="bg-primary py-5 pl-[10%] pr-[10%]">
-			<nav className="flex items-center justify-between flex-wrap">
-				<Link className="flex items-center flex-shrink-0 mr-4 space-x-2" href="/">
-					<FiShoppingCart className="w-7 h-7" />
-					<span className="font-semibold text-2xl tracking-wide">VShop</span>
-				</Link>
+		<>
+			<nav className="bg-zinc-900 backdrop-blur-md bg-opacity-75 p-5 sticky z-50 top-3 rounded-xl border border-white border-opacity-10 shadow-lg">
+				<nav className="flex items-center flex-wrap">
+					<Link className="flex items-center space-x-2 mr-3" href="/">
+						<FiShoppingCart className="w-7 h-7" />
+						<span className="font-semibold text-2xl tracking-wide">VShop</span>
+					</Link>
+					{[
+						{ text: "Transparent", href: "/#transparent" },
+						{ text: "Secure", href: "/#secure" },
+						{ text: "Elegant", href: "/#elegant" },
+					].map((item, i) => (
+						<Link
+							key={i}
+							className="hidden sm:block bg-white bg-opacity-0 px-3 py-2 rounded-md hover:bg-opacity-10"
+							href={item.href}
+						>
+							{item.text}
+						</Link>
+					))}
+					<div className="ml-auto">
+						<a href="https://github.com/vshopapp/mobile">
+							<FiGithub className="w-5 h-5" />
+						</a>
+					</div>
+				</nav>
 			</nav>
 			{props.pageTitle && (
-				<div className="h-32 flex items-end">
-					<h1 className="text-5xl font-bold pb-5">{props.pageTitle}</h1>
+				<div className="h-24 flex items-end">
+					<h1 className="text-5xl font-bold">{props.pageTitle}</h1>
 				</div>
 			)}
-		</nav>
+		</>
 	);
 };
 

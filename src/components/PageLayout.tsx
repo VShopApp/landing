@@ -15,8 +15,10 @@ export default function PageLayout(props: PropsWithChildren<props>) {
 				</Head>
 			)}
 			<div className="flex flex-col h-screen">
-				<Navbar pageTitle={props.pageTitle} />
-				<div className="pl-[10%] pr-[10%] my-5">{props.children}</div>
+				<div className="mx-[5%] md:mx-[10%]">
+					<Navbar pageTitle={props.pageTitle} />
+					{props.children}
+				</div>
 				<Footer />
 			</div>
 		</>
