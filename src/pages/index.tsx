@@ -51,12 +51,12 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>VShop: Check your Valorant Shop with ease.</title>
+				<title>VShop: Check your game shop with ease.</title>
 			</Head>
 			<PageLayout>
 				<div className="text-center mt-10">
 					<div className="text-4xl sm:text-5xl py-5 font-medium">
-						<h1>Check your Valorant shop while</h1>
+						<h1>Check your game shop while</h1>
 						<div className="text-primary inline-flex text-ellipsis">
 							<TextTransition springConfig={presets.gentle}>{activities[index]}</TextTransition>
 						</div>
@@ -78,7 +78,7 @@ export default function Home() {
 							Why is it not on the Play Store or App Store?
 						</a>
 					</div>
-					<div className="flex items-center justify-center space-x-3 mt-5 overflow-x-auto">
+					{/* <div className="flex items-center justify-center space-x-3 mt-5 overflow-x-auto">
 						{["0", "1", "3"].map((img, i) => (
 							<img
 								alt="VShop App Screenshot"
@@ -87,7 +87,7 @@ export default function Home() {
 								className="w-56 rounded-lg"
 							/>
 						))}
-					</div>
+					</div> */}
 				</div>
 				<div
 					id="transparent"
@@ -142,13 +142,13 @@ export default function Home() {
 								React Native Paper
 							</a>
 							, VShop seamlessly blends in with the Android operating system, making it an elegant
-							way to see what your Valorant store has to offer.
+							way to see what your game store has to offer.
 						</p>
 					</div>
 					<img
 						alt="VShop mockup"
-						src="/img/mockup.png"
-						className="hidden md:block rounded-md w-[60%] h-max object-cover px-[5%] pt-2 shadow-md bg-primary"
+						src="/img/rnp.svg"
+						className="hidden md:block rounded-md w-64 h-max object-cover p-10"
 					/>
 				</div>
 			</PageLayout>

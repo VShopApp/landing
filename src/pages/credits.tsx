@@ -18,8 +18,8 @@ const credits = [
 	{
 		name: "Resources",
 		users: [
-			{ discordId: "239625893738315776", info: "Creator of valorant-api-docs" },
-			{ discordId: "373913699943186432", info: "Creator of valorant-api.com" },
+			{ discordId: "239625893738315776", info: "Creator of unofficial API documentation" },
+			{ discordId: "373913699943186432", info: "Hosting game assets" },
 		],
 	},
 	{
