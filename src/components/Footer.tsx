@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Footer() {
 	return (
 		<div className="w-full bg-black bg-opacity-50 mt-10">
-			<div className="w-full py-10 px-10 flex flex-col md:flex-row justify-evenly text-gray-300 space-y-5 md:space-y-0">
+			<div className="w-full p-10 flex flex-col md:flex-row justify-evenly text-gray-300 space-y-5 md:space-y-0">
 				<div>
 					<h2 className="text-xl font-bold text-white mb-2">VShop</h2>
 					<div className="space-y-[0.5px]">
@@ -19,10 +19,13 @@ export default function Footer() {
 					</div>
 				</div>
 				<div>
-					<h2 className="text-xl font-bold text-white mb-2">Socials</h2>
+					<h2 className="text-xl font-bold text-white mb-2">Get In Touch</h2>
 					<div className="space-y-[0.5px]">
 						<p>
-							<a href="/discord">Discord Server</a>
+							<a href="/discord">Discord</a>
+						</p>
+						<p>
+							<a href="mailto:nico@vasc.dev">E-Mail</a>
 						</p>
 					</div>
 				</div>
