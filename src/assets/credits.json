@@ -1,0 +1,135 @@
+[
+  {
+    "name": "Mobile app",
+    "users": [
+      {
+        "name": "vasc",
+        "info": null
+      }
+    ]
+  },
+  {
+    "name": "Website",
+    "users": [
+      {
+        "name": "vasc",
+        "info": null
+      }
+    ]
+  },
+  {
+    "name": "Documentation",
+    "users": [
+      {
+        "name": "Mutebefehl",
+        "info": null
+      }
+    ]
+  },
+  {
+    "name": "Resources",
+    "users": [
+      {
+        "name": "techchrism",
+        "info": "Creator of unofficial API documentation"
+      },
+      {
+        "name": "m4rlxn",
+        "info": "Hosting game assets"
+      }
+    ]
+  },
+  {
+    "name": "Translators",
+    "users": [
+      {
+        "name": "Mutebefehl",
+        "info": "German"
+      },
+      {
+        "name": "c0taro",
+        "info": "German"
+      },
+      {
+        "name": "reyyzero",
+        "info": "Chinese Simplified & Traditional"
+      },
+      {
+        "name": "c33kay",
+        "info": "French"
+      },
+      {
+        "name": "lrk.",
+        "info": "Korean"
+      },
+      {
+        "name": "cyan_0165",
+        "info": "Korean"
+      },
+      {
+        "name": "mokdori_dambi",
+        "info": "Korean"
+      },
+      {
+        "name": ".ivailo",
+        "info": "Portuguese"
+      },
+      {
+        "name": "kyllpfuka",
+        "info": "Portuguese"
+      },
+      {
+        "name": "xurreallited",
+        "info": "Russian"
+      },
+      {
+        "name": "endlesskaan",
+        "info": "Turkish"
+      },
+      {
+        "name": "puranoia",
+        "info": "Arabic"
+      },
+      {
+        "name": "strumykx",
+        "info": "Polish"
+      },
+      {
+        "name": "oversensitive",
+        "info": "Italian"
+      },
+      {
+        "name": "lul6411",
+        "info": "Italian"
+      },
+      {
+        "name": "yungesthoffo",
+        "info": "Italian"
+      },
+      {
+        "name": "k_katara_a",
+        "info": "Japanese"
+      },
+      {
+        "name": "sir_z",
+        "info": "Spanish"
+      },
+      {
+        "name": "kirai30",
+        "info": "Spanish"
+      },
+      {
+        "name": "g1rnxz",
+        "info": "Thai"
+      },
+      {
+        "name": "c33kay",
+        "info": "Vietnamese"
+      },
+      {
+        "name": "drakejebuh",
+        "info": "Vietnamese"
+      }
+    ]
+  }
+]

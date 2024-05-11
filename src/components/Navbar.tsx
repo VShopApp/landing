@@ -34,7 +34,7 @@ const Navbar = (props: props) => {
 				</nav>
 			</nav>
 			{props.pageTitle && (
-				<div className="h-24 flex items-end">
+				<div className="h-24 flex items-end mb-10">
 					<h1 className="text-5xl font-bold">{props.pageTitle}</h1>
 				</div>
 			)}
