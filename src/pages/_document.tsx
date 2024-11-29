@@ -5,11 +5,13 @@ export default function Document() {
 		<Html>
 			<Head>
 				<link rel="icon" href="/favicon.ico" sizes="any" />
-				<script
-					async
-					src="https://analytics.vasc.cloud/script.js"
-					data-website-id="ee9f31f2-ec08-459d-b3bd-1b87753ace74"
-				></script>
+				{process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN && process.env.NEXT_PUBLIC_PLAUSIBLE_URL && (
+					<script
+						defer
+						data-domain={process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN}
+						src={`${process.env.NEXT_PUBLIC_PLAUSIBLE_URL}/js/script.outbound-links.js`}
+					></script>
+				)}
 			</Head>
 			<body className="bg-secondary text-white">
 				<Main />
