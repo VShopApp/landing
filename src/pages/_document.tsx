@@ -9,7 +9,7 @@ export default function Document() {
 					<script
 						defer
 						data-domain={process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN}
-						src={`${process.env.NEXT_PUBLIC_PLAUSIBLE_URL}/js/script.outbound-links.js`}
+						src={`${process.env.NEXT_PUBLIC_PLAUSIBLE_URL}/js/script.hash.outbound-links.js`}
 					></script>
 				)}
 			</Head>
