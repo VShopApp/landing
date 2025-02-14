@@ -1,4 +1,5 @@
 import Link from "next/link";
+import LINKS from "../constants/links";
 
 export default function Footer() {
 	return (
@@ -8,7 +9,9 @@ export default function Footer() {
 					<h2 className="text-xl font-bold text-white mb-2">VShop</h2>
 					<div className="space-y-[0.5px]">
 						<p>
-							<a href="https://docs.vshop.one">Documentation</a>
+							<a href={LINKS.DOCS} target="_blank" rel="noopener noreferrer">
+								Documentation
+							</a>
 						</p>
 						<p>
 							<Link href="/credits">Credits</Link>
@@ -19,7 +22,9 @@ export default function Footer() {
 					<h2 className="text-xl font-bold text-white mb-2">Get In Touch</h2>
 					<div className="space-y-[0.5px]">
 						<p>
-							<a href="/discord">Discord</a>
+							<a href={LINKS.DICORD} target="_blank" rel="noopener noreferrer">
+								Discord
+							</a>
 						</p>
 						<p>
 							<a href="mailto:nico@vasc.dev">E-Mail</a>
