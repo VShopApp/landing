@@ -22,7 +22,7 @@ export default function Footer() {
 					<h2 className="text-xl font-bold text-white mb-2">Get In Touch</h2>
 					<div className="space-y-[0.5px]">
 						<p>
-							<a href={LINKS.DICORD} target="_blank" rel="noopener noreferrer">
+							<a href={LINKS.DISCORD} target="_blank" rel="noopener noreferrer">
 								Discord
 							</a>
 						</p>
