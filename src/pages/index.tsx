@@ -5,44 +5,17 @@ import { useEffect, useState } from "react";
 import { FiGithub, FiLock, FiServer, FiSmartphone } from "react-icons/fi";
 import { AiFillAndroid } from "react-icons/ai";
 import Link from "../components/Link";
+import LinkImg from "../components/LinkImg";
 
-const activities = [
-	"making breakfast.",
-	"exercising.",
-	"watching a movie.",
-	"reading a book.",
-	"relaxing on the couch.",
-	"taking a walk.",
-	"going for a run.",
-	"going to the gym.",
-	"attending a meeting.",
-	"exploring a new city.",
-	"cooking a meal.",
-	"gardening.",
-	"attending a class.",
-	"going to a concert.",
-	"going to a museum.",
-	"visiting a zoo.",
-	"going to a theme park.",
-	"taking a road trip.",
-	"going on a hike.",
-	"going to the beach.",
-	"going on a vacation.",
-	"traveling abroad.",
-	"going to a festival.",
-	"attending a workshop.",
-	"visiting a winery.",
-	"attending a book club.",
-	"going to a theater.",
-	"going to a coffee shop.",
-];
+import LINKS from "../constants/links";
+import ACTIVITIES from "../constants/activities";
 
 export default function Home() {
 	const [index, setIndex] = useState(0);
 
 	useEffect(() => {
 		const intervalId = setInterval(
-			() => setIndex(Math.floor(Math.random() * activities.length)),
+			() => setIndex(Math.floor(Math.random() * ACTIVITIES.length)),
 			3000
 		);
 		return () => clearTimeout(intervalId);
@@ -58,21 +31,24 @@ export default function Home() {
 					<div className="text-4xl sm:text-5xl py-5 font-medium">
 						<h1>Check your game shop while</h1>
 						<div className="text-primary inline-flex text-ellipsis">
-							<TextTransition springConfig={presets.gentle}>{activities[index]}</TextTransition>
+							<TextTransition springConfig={presets.gentle}>{ACTIVITIES[index]}</TextTransition>
 						</div>
 					</div>
 					<h2 className="text-xl text-gray-300 pb-3">Fully transparent, secure and elegant.</h2>
 					<div className="flex items-center justify-center space-x-2">
 						<Link
-							href="https://github.com/VShopApp/mobile/releases/latest/download/VShop.apk"
+							href={LINKS.LATEST_RELEASE_APK}
 							text="Download Android APK"
 							icon={AiFillAndroid}
+							openInNewTab={false}
 						/>
-						<Link href="https://github.com/VShopApp/mobile" text="Source Code" icon={FiGithub} />
+						<Link href={LINKS.MOBILE_REPO} text="Source Code" icon={FiGithub} />
 					</div>
 					<div className="my-2">
 						<a
-							href="https://docs.vshop.one/distribution-update"
+							href={LINKS.DISTRIBUTION_INFO}
+							target="_blank"
+							rel="noopener noreferrer"
 							className="text-primary underline underline-offset-4 text-sm"
 						>
 							Why is it not on the Play Store or App Store?
@@ -98,7 +74,9 @@ export default function Home() {
 						<p className="text-lg text-gray-300 mt-3">
 							Our source code is publicly available on{" "}
 							<a
-								href="https://github.com/vshopapp/mobile"
+								href={LINKS.MOBILE_REPO}
+								target="_blank"
+								rel="noopener noreferrer"
 								className="text-primary underline underline-offset-4"
 							>
 								GitHub
@@ -107,10 +85,16 @@ export default function Home() {
 							open to contributions!
 						</p>
 					</div>
-					<img
-						alt="Source Code of the VShop mobile app on GitHub"
-						src="/img/github.png"
-						className="hidden md:block rounded-md w-[100%] shadow-md"
+
+					<LinkImg
+						href={LINKS.MOBILE_REPO}
+						image={
+							<img
+								alt="Source Code of the VShop mobile app on GitHub"
+								src="/img/github.png"
+								className="hidden lg:block rounded-md w-[100%] shadow-md"
+							/>
+						}
 					/>
 				</div>
 				<div
@@ -136,7 +120,9 @@ export default function Home() {
 						<p className="text-lg text-gray-300 mt-3">
 							Built with{" "}
 							<a
-								href="https://callstack.github.io/react-native-paper/"
+								href={LINKS.RN_PAPER}
+								target="_blank"
+								rel="noopener noreferrer"
 								className="text-primary underline underline-offset-4"
 							>
 								React Native Paper
@@ -145,10 +131,16 @@ export default function Home() {
 							way to see what your game store has to offer.
 						</p>
 					</div>
-					<img
-						alt="VShop mockup"
-						src="/img/rnp.svg"
-						className="hidden md:block rounded-md w-64 h-max object-cover p-10"
+
+					<LinkImg
+						href={LINKS.RN_PAPER}
+						image={
+							<img
+								alt="VShop mockup"
+								src="/img/rnp.svg"
+								className="hidden md:block rounded-md w-64 h-max object-cover p-10"
+							/>
+						}
 					/>
 				</div>
 			</PageLayout>
